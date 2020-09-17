@@ -14,39 +14,21 @@ A plugin for splitting and merging Salesforce profiles.
 ![alt text](https://github.com/lodossDev/sfdx-profiles-splitter/blob/master/images/Screenshot%202018-10-28%20at%2021.49.34.png?raw=true)
 
 ## Setup
-
 ### Install from source
-
 1. Install the SDFX CLI.
-2. Clone the repository: `git clone git@github.com:lodossDev/sfdx-profiles-splitter.git`
-3. (Yarn)Install npm modules: `yarn install`
+2. Clone the repository: `git clone git@github.com:hassanalamibmx/sfdx-profiles-splitter.git`
+3. Install npm modules: `npm install`
 4. Link the plugin: `sfdx plugins:link .`
 
 
 ## Usage
-<!-- usage -->
-```sh-session
-$ npm install -g sfdx-profiles-splitter
-$ sfdx COMMAND
-running command...
-$ sfdx (-v|--version|version)
-sfdx-profiles-splitter/0.1.0 darwin-x64 node-v8.9.4
-$ sfdx --help [COMMAND]
-USAGE
-  $ sfdx COMMAND
-...
-```
-<!-- usagestop -->
-
 <!-- commands -->
 * [`sfdx metadata:profiles:convert`](#sfdx-metadataprofilesconvert)
 * [`sfdx metadata:profiles:merge`](#sfdx-metadataprofilesmerge)
 * [`sfdx metadata:profiles:split`](#sfdx-metadataprofilessplit)
 
-## `sfdx metadata:profiles:convert`
-
+### `sfdx metadata:profiles:convert`
 Converts full profiles into json or xml format.
-
 ```
 USAGE
   $ sfdx metadata:profiles:convert
@@ -71,12 +53,8 @@ EXAMPLE
            //Converts full profiles into json or xml, !!!! does not split !!!!.
 ```
 
-_See code: [src/commands/metadata/profiles/convert.ts](https://github.com/lodossDev/sfdx-profiles-splitter/blob/v0.1.0/src/commands/metadata/profiles/convert.ts)_
-
-## `sfdx metadata:profiles:merge`
-
+### `sfdx metadata:profiles:merge`
 Merge profiles that were split.
-
 ```
 USAGE
   $ sfdx metadata:profiles:merge
@@ -100,12 +78,8 @@ EXAMPLE
            //Merges profiles located in specified input dir and copies them into the output dir.
 ```
 
-_See code: [src/commands/metadata/profiles/merge.ts](https://github.com/lodossDev/sfdx-profiles-splitter/blob/v0.1.0/src/commands/metadata/profiles/merge.ts)_
-
-## `sfdx metadata:profiles:split`
-
+### `sfdx metadata:profiles:split`
 Split profiles into smaller parts.
-
 ```
 USAGE
   $ sfdx metadata:profiles:split
@@ -128,6 +102,3 @@ EXAMPLE
            sfdx metadata:profiles:split -i force-app/main/default/profiles -o force-app/main/default/test
            //Splits profiles located in specified input dir and copies them into the output dir.
 ```
-
-_See code: [src/commands/metadata/profiles/split.ts](https://github.com/lodossDev/sfdx-profiles-splitter/blob/v0.1.0/src/commands/metadata/profiles/split.ts)_
-<!-- commandsstop -->
