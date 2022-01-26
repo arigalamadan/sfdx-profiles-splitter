@@ -18,6 +18,9 @@
             "customPermissions": {
                 "nameTag": "name"
             },
+            "customMetadataTypeAccesses": {
+                "nameTag": "name"
+            },
             "fieldPermissions": {
                 "nameTag": "field"
             },
@@ -40,7 +43,7 @@
                 "nameTag": "name"
             },
             "layoutAssignments": {
-                "nameTag": "layout"
+                "nameTag": "recordType"
             }
         },
         "metaTags": ["custom", "userLicense"]
