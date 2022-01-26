@@ -21,6 +21,9 @@
             "customMetadataTypeAccesses": {
                 "nameTag": "name"
             },
+            "customSettingAccesses": {
+                "nameTag": "name"
+            },
             "fieldPermissions": {
                 "nameTag": "field"
             },
