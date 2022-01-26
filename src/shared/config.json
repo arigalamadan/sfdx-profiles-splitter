@@ -43,7 +43,7 @@
                 "nameTag": "name"
             },
             "layoutAssignments": {
-                "nameTag": "recordType"
+                "nameTag": "layout"
             }
         },
         "metaTags": ["custom", "userLicense"]
