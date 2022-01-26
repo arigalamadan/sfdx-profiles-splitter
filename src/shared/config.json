@@ -46,7 +46,8 @@
                 "nameTag": "name"
             },
             "layoutAssignments": {
-                "nameTag": "layout"
+                "nameTag": "recordType",
+                "fallbackNameTag": "layout"
             }
         },
         "metaTags": ["custom", "userLicense"]

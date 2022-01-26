@@ -82,6 +82,7 @@ export default class Split extends SfdxCommand {
                         await fs.ensureDir(itemRoot);
     
                         const targetName = config.profiles.tags[metadata].nameTag;
+                        const fallbackName = config.profiles.tags[metadata].fallbackNameTag;
                         
                         if (stream['Profile'][metadata] === undefined) {
                             continue;
@@ -98,9 +99,8 @@ export default class Split extends SfdxCommand {
                             } else {
                                 for (const item of stream['Profile'][metadata]) {
                                     let model = createModel(metadata, [item]);
-    
                                     await fs.writeFile(
-                                        itemRoot + '/' + item[targetName]._text + '-meta.xml',
+                                        itemRoot + '/' + (item[targetName] ? item[targetName]._text : item[fallbackName]._text) + '-meta.xml',
                                         convert.json2xml(JSON.stringify(model), config.xmlExport)
                                     );
                                 }
